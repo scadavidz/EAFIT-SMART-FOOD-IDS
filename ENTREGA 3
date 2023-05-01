@@ -1,0 +1,85 @@
+while(True):
+  
+  
+  print("BIENVENIDO A EAFIT SMART FOOD")
+  nombrecompleto = input("Ingresa tu nombre completo: ")
+  correo = input("Ingresa tu correo electrónico: ")
+  if correo.find("@eafit.edu.co") != -1:
+      print("")
+  else:
+      print("(ERROR Termina por que ) El correo debe de ser institucional")
+      break
+  contraseña = input("Ingresa tu contraseña: ")
+  
+  valorminimo=input("cual es el valor minimo : ")
+  valormaximo=input("cual es el valor maximo : ")
+  
+  # Definir una lista de comidas y sus características
+  comidas = [
+      {"nombre": "la Pizza la venden en pimientos a un precio de $16.200 personal , mediana $30.500, 45.500 familiar, tambien la puedes encontrar en pietra santa a un precio de $7.400 personal "
+       
+       , "vegetariana": False, "picante": False, "saludable": False},
+
+    
+      {"nombre": "la hamburguesa la puedes encontrar en el restaurante Dogger a un precio de 14.900 en combo,en Biggos a un precio de 14.200 en combo ,en sol & melon hamburguesa vegetariana a un precio de 10.500 y en fire& house a $9.900 "
+       
+       , "vegetariana": False, "picante": False, "saludable": False},
+
+    
+      {"nombre": "Perro lo puedes encontrar en Dogger a un precio de $ 7.500 sencillo y con combo a $ 11.900, el big dogger sencillo a $ 8.500, en combo $ 12.900, especial en $ 12.900 ", "vegetariana": False, "picante": False, "saludable": False},
+
+    
+      {"nombre": "El pollo lo puedes encontrar en el restaurante biggo's a un precio de $12.500 y en frisby puedes encontrar gran variedad como frisnacks a $10.900, alitas BBQ a un precio de $15.900, presa apanada pequeña a $6.300, dos presas apanadas a $9.700, 4 presas apanadas a $17.700, 8 presas apanadas a $33.200 y 12 presas apanadas a $47.200", "vegetariana"
+       
+       : False, "picante": False, "saludable": True},
+
+    
+      {"nombre": "la pasta la puedes encontrar en pimentos y home-food a $11.500 ", "vegetariana": False, "picante": False, "saludable": True},
+
+    
+      {"nombre": " la sopa la puedes encontrar en sol & menu, la sopa de tomate a un precio de $ 3.500, zucchini y puerro $ 3.500, espinaca y brocoli :$ 3.500, zanahoria: $ 3.500 y finalmente de cebolla a : $ 3.500", "vegetariana": False, "picante": False, "saludable": True},
+
+    
+      {"nombre": "Sandwich lo puedes encontrar en el restaurante sol & melon a un precio de: $7.500, Santa elena : $9.000, Biggos: $6.200, Subway : $10.500 y en dogger a $8.500 ", "vegetariana": True, "picante": False, "saludable": True},
+
+    
+      {"nombre": "Papas a la francesa la puedes encontrar en el restaurante biggos y dogger a un precio de $6.500 ", "vegetariana": False, "picante": False, "saludable": False},
+
+    
+    {"nombre": "la ensalada la puedes encontrar en frisby a  un precio de $3.900, en sol & melon a $12.700 y en fire&house a $14.500 ", "vegetariana": True, "picante": False, "saludable": True},
+
+    
+    {"nombre": "El pescado lo puedes encontrar en sol & melon a un precio de $14.800", "vegetariana": False, "picante": False, "saludable": False}]
+    
+  print("SUGERENCIAS DE LA SEMANA")
+  print("Big Dogger   =   $12.900")
+  print("FRISNACK GRANDE   =   $22.100")    
+  opcion=input("Seleccione una opción (1 o 2): si no desea ninguna, seleccione otro numero ")
+  if opcion == "1":
+    print("Perfecto, has seleccionado una exquisita hamburguesa Big Dogger en combo a 12.900. La puedes encontrar en frente de la biblioteca, bloque 32.")
+  elif opcion == "2":
+    print("Has seleccionado un increíble Frisnack grande a un precio de 22.900. La puedes encontrar en Frisby, en la plazoleta de comidas a la izquierda del bloque 18.")  
+  else:
+    print("")  
+
+  print("TE REALIZAREMOS UNAS PEQUEÑAS PREGUNTAS")
+  # Pedir al usuario sus preferencias
+  vegetariana = input("¿Te gusta la comida vegetariana? (s/n): ").lower() == "s"
+  picante = input("¿Te gusta la comida picante? (s/n): ").lower() == "s"
+  saludable = input("¿Quieres una comida saludable? (s/n): ").lower() == "si"
+  
+  # Filtrar la lista de comidas según las preferencias del usuario
+  comidas_filtradas = []
+  for comida in comidas:
+      if comida["vegetariana"] == vegetariana and comida["picante"] == picante and comida["saludable"] == saludable:
+          comidas_filtradas.append(comida)
+        
+  
+  # Mostrar las comidas recomendadas
+  if len(comidas_filtradas) == 0:
+      print("Lo siento, no hay comidas que coincidan con tus preferencias.")
+  else:
+      print("Te recomendamos estas comidas:")
+      for comida in comidas_filtradas:
+          print("- " + comida["nombre"])
+      puntuacion=input(" Ingrese el nombre y la puntuacion del restaurante que seleccionaste del 1 al 10")
