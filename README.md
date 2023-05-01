@@ -6,3 +6,15 @@ Las personas que conviven diariamente en la universidad EAFIT tiene diferentes g
 El sistema debería tener la capacidad de mostrar los detalles de cada alimento sugerido, como la información nutricional, los ingredientes y las posibles opciones de sustitución, para que los usuarios de la universidad EAFIT puedan tomar una decisión informada sobre lo que quieren consumir.
 
 
+| Nombre y Apellido | Tarea asignada | Fecha |
+|----------|----------|----------|
+|  Samuel Cadavid  | Requisitos   | 27/04/2023  |
+| Yeseetk Rodriguez   | Diagrama de caso de usos   | 27/04/2023  |
+|  Samuel Cadavid   | Diagrama de clases   | 27/04/2023   |
+|  Samuel Cadavid y Yeseetk Rodriguez  | Diagrama de secuencias|  27/04/2023   |
+|  Samuel Cadavid y Yeseetk Rodriguez   | Codigo   | 30/04/2023  
+|  Isabella Quintero, Samuel Cadavid, Yessetk Rodriguez   | video | 22/04/2023   |
+|  Samuel Cadavid y Yeseetk Rodriguez | Plan de trabajo|  30/04/2023   |
+
+
+
