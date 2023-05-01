@@ -5,7 +5,7 @@ Las personas que conviven diariamente en la universidad EAFIT tiene diferentes g
 ### Idea de solución
 El sistema debería tener la capacidad de mostrar los detalles de cada alimento sugerido, como la información nutricional, los ingredientes y las posibles opciones de sustitución, para que los usuarios de la universidad EAFIT puedan tomar una decisión informada sobre lo que quieren consumir.
 
-## plan de trabajo 
+## Plan de trabajo
 | Nombre y Apellido | Tarea asignada | Fecha |
 |----------|----------|----------|
 |  Samuel Cadavid  | Requisitos   | 27/04/2023  |
