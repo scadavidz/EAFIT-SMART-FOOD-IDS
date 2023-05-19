@@ -1,0 +1,213 @@
+import textwrap 
+mensaje= "BIENVENIDO A EAFIT SMART FOOD"
+ancho = max(len(linea) for linea in mensaje.split('\n')) + 4
+alto = mensaje.count('\n') + 4
+print('┌' + '─' * (ancho - 2) + '┐')
+lineas = textwrap.wrap(mensaje, ancho - 4)
+for linea in lineas:
+    print('│ ' + linea.ljust(ancho - 4) + ' │')
+print('└' + '─' * (ancho - 2) + '┘')
+
+
+nombrecompleto = input("Ingresa tu nombre completo: ")
+correo = input("Ingresa tu correo electrónico: ")
+if correo.find("@eafit.edu.co") != -1:
+      print("")
+else:
+      print("(ERROR Termina por que ) El correo debe de ser institucional")
+contraseña = input("Ingresa tu contraseña: ")
+  
+valorminimo=input("cual es el valor minimo : ")
+valormaximo=input("cual es el valor maximo : ")
+  
+  # Definir una lista de comidas y sus características
+comidas = [
+      {"nombre": "la Pizza la venden en pimientos a un precio de $16.200 personal , mediana $30.500, 45.500 familiar, tambien la puedes encontrar en pietra santa a un precio de $7.400 personal "
+       
+       , "vegetariana": False, "picante": False, "saludable": False},
+
+    
+      {"nombre": "la hamburguesa la puedes encontrar en el restaurante Dogger a un precio de 14.900 en combo,en Biggos a un precio de 14.200 en combo ,en sol & melon hamburguesa vegetariana a un precio de 10.500 y en fire& house a $9.900 "
+       
+       , "vegetariana": False, "picante": False, "saludable": False},
+
+    
+      {"nombre": "Perro lo puedes encontrar en Dogger a un precio de $ 7.500 sencillo y con combo a $ 11.900, el big dogger sencillo a $ 8.500, en combo $ 12.900, especial en $ 12.900 ", "vegetariana": False, "picante": False, "saludable": False},
+
+    
+      {"nombre": "El pollo lo puedes encontrar en el restaurante biggo's a un precio de $12.500 y en frisby puedes encontrar gran variedad como frisnacks a $10.900, alitas BBQ a un precio de $15.900, presa apanada pequeña a $6.300, dos presas apanadas a $9.700, 4 presas apanadas a $17.700, 8 presas apanadas a $33.200 y 12 presas apanadas a $47.200", "vegetariana"
+       
+       : False, "picante": False, "saludable": True},
+
+    
+      {"nombre": "la pasta la puedes encontrar en pimentos y home-food a $11.500 ", "vegetariana": False, "picante": False, "saludable": True},
+
+    
+      {"nombre": " la sopa la puedes encontrar en sol & menu, la sopa de tomate a un precio de $ 3.500, zucchini y puerro $ 3.500, espinaca y brocoli :$ 3.500, zanahoria: $ 3.500 y finalmente de cebolla a : $ 3.500", "vegetariana": False, "picante": False, "saludable": True},
+
+    
+      {"nombre": "Sandwich lo puedes encontrar en el restaurante sol & melon a un precio de: $7.500, Santa elena : $9.000, Biggos: $6.200, Subway : $10.500 y en dogger a $8.500 ", "vegetariana": True, "picante": False, "saludable": True},
+
+    
+      {"nombre": "Papas a la francesa la puedes encontrar en el restaurante biggos y dogger a un precio de $6.500 ", "vegetariana": False, "picante": False, "saludable": False},
+
+    
+    {"nombre": "la ensalada la puedes encontrar en frisby a  un precio de $3.900, en sol & melon a $12.700 y en fire&house a $14.500 ", "vegetariana": True, "picante": False, "saludable": True},
+
+    
+    {"nombre": "El pescado lo puedes encontrar en sol & melon a un precio de $14.800", "vegetariana": False, "picante": False, "saludable": False}]
+mensaje1= "SUGERENCIAS DE LA SEMANA"
+ancho = max(len(linea) for linea in mensaje1.split('\n')) + 4
+alto = mensaje1.count('\n') + 4
+print('┌' + '─' * (ancho - 2) + '┐')
+lineas = textwrap.wrap(mensaje1, ancho - 4)
+for linea in lineas:
+    print('│ ' + linea.ljust(ancho - 4) + ' │')
+print('└' + '─' * (ancho - 2) + '┘')
+print("1. para Big Dogger   =   $12.900")
+print("2. para FRISNACK GRANDE   =   $22.100")    
+print("")
+opcion=input("Seleccione una opción (1 o 2): si no desea ninguna, seleccione otro numero ")
+if opcion == "1":
+ print("Perfecto, has seleccionado una exquisita hamburguesa Big Dogger en combo a 12.900. La puedes encontrar en frente de la biblioteca, bloque 32.")
+elif opcion == "2":
+    print("Has seleccionado un increíble Frisnack grande a un precio de 22.900. La puedes encontrar en Frisby, en la plazoleta de comidas a la izquierda del bloque 18.")  
+else:
+    print("")  
+mensaje2= "TE REALIZAREMOS UNAS PEQUEÑAS PREGUNTAS"
+ancho = max(len(linea) for linea in mensaje2.split('\n')) + 4
+alto = mensaje2.count('\n') + 4
+print('┌' + '─' * (ancho - 2) + '┐')
+lineas = textwrap.wrap(mensaje2, ancho - 4)
+for linea in lineas:
+    print('│ ' + linea.ljust(ancho - 4) + ' │')
+print('└' + '─' * (ancho - 2) + '┘')
+  # Pedir al usuario sus preferencias
+vegetariana = input("¿Te gusta la comida vegetariana? (s/n): ").lower() == "s"
+picante = input("¿Te gusta la comida picante? (s/n): ").lower() == "s"
+saludable = input("¿Quieres una comida saludable? (s/n): ").lower() == "si"
+print("")
+restaurantes = {
+    "FRISBY": ["Presa apanada pequeña $ 7.000", "Presa apanada grande $7.500", "2 presas apanadas $ 11.500""4 presas apanadas $17.700",
+"8 presas apanadas $33.200",
+"12 presas apanadas $47.200",
+"Bocado apanado pequeño $7.500",
+"Bocado apanado grande $8.900",
+"1/4 apanado arepas $9.900",
+"Medio apanado arepas $17.900",
+"Pollo apanado arepas $33.400",
+"Familiar apanado arepas $47.400",
+"1/4 apanado francesa $9.00",
+"Medio apanado francesa $17.900",
+"Pollo apanado francesa $40.500",
+"Familiar apanado francesa $59.500",
+"Agrandado 1 presa apanada $3.800"],
+  "SUBWAY": [
+        "Sanduche jamón $12.500",
+        "Sanduche pavo $12.500",
+        "Sanduche pavo jamón $12.500",
+        "Sanduche atún $14.500",
+        "Sanduche italiano $14.500",
+        "Sanduche italiano bmt $14.500",
+        "Sanduche pechuga de pollo $14.500",
+        "Sanduche teriyaki $15.500",
+        "Sanduche melt $15.500",
+        "Sanduche club $15.500",
+        "Sanduche roastbeef $12.400"
+    ],
+    "COFFEE HOUSE": [
+        "Agua 600 ml $3.000",
+        "Agua con gas $3.000",
+        "Agua mini $2.000",
+        "Alfajor arequipe y chocolate $2.000",
+        "Almojábana $3.000",
+        "Amaris $3.700",
+        "Amaris en leche $3.700",
+        "Aromática de panelita $2.500",
+        "Aromática flor de Jamaica $2.500",
+        "Aromática frutas $2.500",
+        "Aromática sobre $2.500",
+        "Buñuelo $1.100",
+        "Café con leche $2.500",
+        "Café con leche descafeinado $3.000",
+        "Café con leche doble $5.000",
+        "Café leche de almendras $4.000",
+        "Capuchino $3.600",
+        "Capuchino almendra 702 $3.600",
+        "Expreso corto $2.700",
+        "Expreso largo $2.700",
+        "Expreso late $2.700",
+        "Expreso machiato $3.000",
+        "Calletas de mantequilla $800"
+    ],
+      "DOGGER": [
+        "Dogger Sencillo 10.000 Combo 14.900",
+        "Big Dogger Sencillo 9.500 Combo 15.900",
+        "Especiales Sencillo 9.500 Combo 15.900",
+        "BURGERS",
+        "150 grs. Sencillo 12.900 Combo 16.900",
+        "300 grs. Sencillo 16.900 Combo 21.900",
+        "SANDWICHES",
+        "OTROS",
+        "Papa francesa 8.500",
+        "Papa con queso y tocineta 15.900",
+        "Papa Chips 4.500",
+        "Nachos con Queso y Chili 14.900",
+        "ADICIONES",
+        "Queso Mozzarella 4.000",
+        "Queso Amarillo 4.000",
+        "Queso Fundido 3.500",
+        "Chili 3.000",
+        "BEBIDAS",
+        "Gaseosa 12 onz 2.900",
+        "Soda 4.200",
+        "Soda 22 Oz 5.200",
+        "Jugo Hit 4.200",
+        "Mr Tea 4.200",
+        "Botella agua 3.900",
+        "Hatsu 4.900",
+        "Gaseosa 10 onz 4.900",
+        "POSTRES",
+        "Galletas 2.900",
+        "Brownie 2.900",
+    ]
+}
+
+# Pedir al usuario el nombre del restaurante
+nombre_restaurante = input("Ingrese el nombre del restaurante que desea buscar: ")
+
+# Obtener el menú del restaurante
+menu = restaurantes.get(nombre_restaurante)
+
+# Mostrar el menú si existe el restaurante
+if menu:
+    print("Menú de", nombre_restaurante + ":")
+
+    # Encontrar el plato más largo para establecer el ancho del rectángulo
+    max_length = max(len(plato) for plato in menu)
+
+    # Imprimir el menú en un rectángulo
+    print("┌" + "─" * (max_length + 2) + "┐")
+    for plato in menu:
+        print("│ " + plato.ljust(max_length) + " │")
+    print("└" + "─" * (max_length + 2) + "┘")
+else:
+    print("El restaurante no se encuentra en la lista.")
+
+
+  # Filtrar la lista de comidas según las preferencias del usuario
+comidas_filtradas = []
+for comida in comidas:
+      if comida["vegetariana"] == vegetariana and comida["picante"] == picante and comida["saludable"] == saludable:
+          comidas_filtradas.append(comida)
+        
+  
+  # Mostrar las comidas recomendadas
+if len(comidas_filtradas) == 0:
+      print("Lo siento, no hay comidas que coincidan con tus preferencias.")
+else:
+      print("Te recomendamos estas comidas:")
+      for comida in comidas_filtradas:
+          print("- " + comida["nombre"])
+      puntuacion=input(" Ingrese el nombre y la puntuacion del restaurante que seleccionaste del 1 al 10")
+        
